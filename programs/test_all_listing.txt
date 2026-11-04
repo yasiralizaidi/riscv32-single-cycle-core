@@ -1,0 +1,161 @@
+0:	123450b7          	lui	x1,0x12345
+4:	fffff237          	lui	x4,0xfffff
+8:	00000117          	auipc	x2,0x0
+c:	00001197          	auipc	x3,0x1
+10:	06400293          	addi	x5,x0,100
+14:	ff900313          	addi	x6,x0,-7
+18:	80028393          	addi	x7,x5,-2048
+1c:	00532413          	slti	x8,x6,5
+20:	0052a493          	slti	x9,x5,5
+24:	00533513          	sltiu	x10,x6,5
+28:	0652b593          	sltiu	x11,x5,101
+2c:	0f02c613          	xori	x12,x5,240
+30:	7002e693          	ori	x13,x5,1792
+34:	0ff37713          	andi	x14,x6,255
+38:	00431793          	slli	x15,x6,0x4
+3c:	01c35813          	srli	x16,x6,0x1c
+40:	40135893          	srai	x17,x6,0x1
+44:	fff34913          	xori	x18,x6,-1
+48:	00500013          	addi	x0,x0,5
+4c:	006289b3          	add	x19,x5,x6
+50:	40530a33          	sub	x20,x6,x5
+54:	01029ab3          	sll	x21,x5,x16
+58:	00532b33          	slt	x22,x6,x5
+5c:	0062abb3          	slt	x23,x5,x6
+60:	0062bc33          	sltu	x24,x5,x6
+64:	00533cb3          	sltu	x25,x6,x5
+68:	0062cd33          	xor	x26,x5,x6
+6c:	00835db3          	srl	x27,x6,x8
+70:	40835e33          	sra	x28,x6,x8
+74:	0050eeb3          	or	x29,x1,x5
+78:	00627f33          	and	x30,x4,x6
+7c:	02100493          	addi	x9,x0,33
+80:	009294b3          	sll	x9,x5,x9
+84:	00000533          	add	x10,x0,x0
+88:	00602023          	sw	x6,0(x0) # 0 <_start>
+8c:	00501223          	sh	x5,4(x0) # 4 
+90:	00600323          	sb	x6,6(x0) # 6 
+94:	005003a3          	sb	x5,7(x0) # 7 
+98:	00402583          	lw	x11,4(x0) # 4 
+9c:	00001603          	lh	x12,0(x0) # 0 <_start>
+a0:	00005683          	lhu	x13,0(x0) # 0 <_start>
+a4:	00600703          	lb	x14,6(x0) # 6 
+a8:	00604783          	lbu	x15,6(x0) # 6 
+ac:	00601803          	lh	x16,6(x0) # 6 
+b0:	00205883          	lhu	x17,2(x0) # 2 
+b4:	01000913          	addi	x18,x0,16
+b8:	fe192c23          	sw	x1,-8(x18)
+bc:	00802983          	lw	x19,8(x0) # 8 
+c0:	00601623          	sh	x6,12(x0) # c 
+c4:	00000723          	sb	x0,14(x0) # e 
+c8:	005007a3          	sb	x5,15(x0) # f 
+cc:	00c02a03          	lw	x20,12(x0) # c 
+d0:	00000a93          	addi	x21,x0,0
+d4:	00528463          	beq	x5,x5,dc <b1>
+d8:	66600f13          	addi	x30,x0,1638
+dc:	001aea93          	ori	x21,x21,1
+e0:	00628463          	beq	x5,x6,e8 <b2>
+e4:	002aea93          	ori	x21,x21,2
+e8:	00629463          	bne	x5,x6,f0 <b3>
+ec:	66600f13          	addi	x30,x0,1638
+f0:	004aea93          	ori	x21,x21,4
+f4:	00529463          	bne	x5,x5,fc <b4>
+f8:	008aea93          	ori	x21,x21,8
+fc:	00534463          	blt	x6,x5,104 <b5>
+100:	66600f13          	addi	x30,x0,1638
+104:	010aea93          	ori	x21,x21,16
+108:	0062c463          	blt	x5,x6,110 <b6>
+10c:	020aea93          	ori	x21,x21,32
+110:	0062d463          	bge	x5,x6,118 <b7>
+114:	66600f13          	addi	x30,x0,1638
+118:	040aea93          	ori	x21,x21,64
+11c:	00535463          	bge	x6,x5,124 <b8>
+120:	080aea93          	ori	x21,x21,128
+124:	0062e463          	bltu	x5,x6,12c <b9>
+128:	66600f13          	addi	x30,x0,1638
+12c:	100aea93          	ori	x21,x21,256
+130:	00536463          	bltu	x6,x5,138 <b10>
+134:	200aea93          	ori	x21,x21,512
+138:	00537463          	bgeu	x6,x5,140 <b11>
+13c:	66600f13          	addi	x30,x0,1638
+140:	400aea93          	ori	x21,x21,1024
+144:	0062f463          	bgeu	x5,x6,14c <b12>
+148:	800aea93          	ori	x21,x21,-2048
+14c:	0052d463          	bge	x5,x5,154 <b13>
+150:	66600f13          	addi	x30,x0,1638
+154:	00400b13          	addi	x22,x0,4
+158:	00000b93          	addi	x23,x0,0
+15c:	016b8bb3          	add	x23,x23,x22
+160:	fffb0b13          	addi	x22,x22,-1
+164:	fe0b1ce3          	bne	x22,x0,15c <loop>
+168:	01000c6f          	jal	x24,178 <func>
+16c:	001c8c93          	addi	x25,x25,1
+170:	0140006f          	jal	x0,184 <after_func>
+174:	66600f13          	addi	x30,x0,1638
+178:	00000c93          	addi	x25,x0,0
+17c:	000c0067          	jalr	x0,0(x24)
+180:	66600f13          	addi	x30,x0,1638
+184:	00000d17          	auipc	x26,0x0
+188:	011d0de7          	jalr	x27,17(x26) # 195 <after_func>
+18c:	66600f13          	addi	x30,x0,1638
+190:	66600f13          	addi	x30,x0,1638
+194:	04d00e13          	addi	x28,x0,77
+198:	00000e97          	auipc	x29,0x0
+19c:	00ce8ee7          	jalr	x29,12(x29) # 1a4 <after_func>
+1a0:	66600f13          	addi	x30,x0,1638
+1a4:	00000f13          	addi	x30,x0,0
+1a8:	00100093          	addi	x1,x0,1
+1ac:	00108133          	add	x2,x1,x1
+1b0:	001101b3          	add	x3,x2,x1
+1b4:	003181b3          	add	x3,x3,x3
+1b8:	00218233          	add	x4,x3,x2
+1bc:	00420033          	add	x0,x4,x4
+1c0:	004002b3          	add	x5,x0,x4
+1c4:	00001337          	lui	x6,0x1
+1c8:	02330313          	addi	x6,x6,35 # 1023 <end>
+1cc:	00602823          	sw	x6,16(x0) # 10 
+1d0:	01002383          	lw	x7,16(x0) # 10 
+1d4:	00138413          	addi	x8,x7,1
+1d8:	01002483          	lw	x9,16(x0) # 10 
+1dc:	00902a23          	sw	x9,20(x0) # 14 
+1e0:	01402503          	lw	x10,20(x0) # 14 
+1e4:	00650463          	beq	x10,x6,1ec <h1>
+1e8:	66600f13          	addi	x30,x0,1638
+1ec:	00500593          	addi	x11,x0,5
+1f0:	00559463          	bne	x11,x5,1f8 <h2>
+1f4:	66600f13          	addi	x30,x0,1638
+1f8:	0040066f          	jal	x12,1fc <h3>
+1fc:	00060693          	addi	x13,x12,0
+200:	00100fb3          	add	x31,x0,x1
+204:	002f8fb3          	add	x31,x31,x2
+208:	003f8fb3          	add	x31,x31,x3
+20c:	004f8fb3          	add	x31,x31,x4
+210:	005f8fb3          	add	x31,x31,x5
+214:	006f8fb3          	add	x31,x31,x6
+218:	007f8fb3          	add	x31,x31,x7
+21c:	008f8fb3          	add	x31,x31,x8
+220:	009f8fb3          	add	x31,x31,x9
+224:	00af8fb3          	add	x31,x31,x10
+228:	00bf8fb3          	add	x31,x31,x11
+22c:	00cf8fb3          	add	x31,x31,x12
+230:	00df8fb3          	add	x31,x31,x13
+234:	00ef8fb3          	add	x31,x31,x14
+238:	00ff8fb3          	add	x31,x31,x15
+23c:	010f8fb3          	add	x31,x31,x16
+240:	011f8fb3          	add	x31,x31,x17
+244:	012f8fb3          	add	x31,x31,x18
+248:	013f8fb3          	add	x31,x31,x19
+24c:	014f8fb3          	add	x31,x31,x20
+250:	015f8fb3          	add	x31,x31,x21
+254:	016f8fb3          	add	x31,x31,x22
+258:	017f8fb3          	add	x31,x31,x23
+25c:	018f8fb3          	add	x31,x31,x24
+260:	019f8fb3          	add	x31,x31,x25
+264:	01af8fb3          	add	x31,x31,x26
+268:	01bf8fb3          	add	x31,x31,x27
+26c:	01cf8fb3          	add	x31,x31,x28
+270:	01df8fb3          	add	x31,x31,x29
+274:	01ef8fb3          	add	x31,x31,x30
+278:	03f02e23          	sw	x31,60(x0) # 3c 
+27c:	0000006f          	jal	x0,27c <end>
+280:	00000013          	addi	x0,x0,0
