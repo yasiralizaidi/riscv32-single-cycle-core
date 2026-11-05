@@ -97,19 +97,19 @@ Data memory appears one byte per row in little-endian order, so a 32-bit word sp
 
 **Bubble sort:** words 0 to 3 begin as `7, 2, 9, 4` and finish as `9, 7, 4, 2`.
 
-![Bubble sort](waveforms/bubble_sort.png)
+![Bubble sort](waveforms/wave_bubble_sort.png)
 
 **Fibonacci:** terms show up in memory one at a time, with `34` landing at address 36 last.
 
-![Fibonacci](waveforms/fibonacci.png)
+![Fibonacci](waveforms/wave_fibonacci.png)
 
 **Array maximum:** after the array is written, `42` is stored at address 24.
 
-![Find maximum](waveforms/find_max.png)
+![Find maximum](waveforms/wave_find_max.png)
 
 **test_all:** the complete run.
 
-![test_all run](waveforms/test_all.png)
+![test_all run](waveforms/wave_test_all.png)
 
 ## Limitations and next steps
 
